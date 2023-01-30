@@ -30,7 +30,7 @@ const Form = ({ client }) => {
           Email:
         </label>
         <input
-          type="text"
+          type="email"
           id="email"
           className="mt-2 block w-full p-3 bg-gray-50"
           placeholder="Email do cliente"
@@ -42,7 +42,7 @@ const Form = ({ client }) => {
           Telefone:
         </label>
         <input
-          type="text"
+          type="tel"
           id="tel"
           className="mt-2 block w-full p-3 bg-gray-50"
           placeholder="Nome do cliente"
