@@ -1,3 +1,12 @@
-const Index = () => <div>Clientes</div>;
+export const loader = () => {
+  return 'Loader';
+};
+
+const Index = () => (
+  <>
+    <h1 className="font-black text-4xl text-blue-900">Clientes</h1>
+    <p className="mt-3">Administrar seus Clientes</p>
+  </>
+);
 
 export default Index;
