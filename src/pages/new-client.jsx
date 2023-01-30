@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
+import Form from '../components/Form';
+
 const NewClient = () => {
   const navigate = useNavigate();
 
@@ -10,7 +12,7 @@ const NewClient = () => {
         Preencha todos os campos para registrar um novo cliente
       </p>
 
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-12">
         <button
           className="bg-blue-800 text-white px-3 py-1 font-bold uppercase"
           onClick={() => navigate(-1)}
@@ -20,7 +22,12 @@ const NewClient = () => {
       </div>
 
       <div className="bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10">
-        <p>Formulário</p>
+        <Form />
+        <input
+          type="submit"
+          className="mt-5 w-full bg-blue-800 p-3 uppercase font-bold text-white text-lg cursor-pointer hover:bg-blue-900 transition-colors rounded-md"
+          value="Registrar Cliente"
+        />
       </div>
     </>
   );
