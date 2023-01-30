@@ -1,0 +1,39 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Juan",
+      "tel": 102013313,
+      "email": "juan@juan.com",
+      "company": "IBM"
+    },
+    {
+      "id": 2,
+      "name": "Karen",
+      "tel": 138198313,
+      "email": "karen@juan.com",
+      "company": "IBM"
+    },
+    {
+      "id": 3,
+      "name": "Carlos",
+      "tel": 31983913,
+      "email": "carlos@juan.com",
+      "company": "IBM"
+    },
+    {
+      "id": 4,
+      "name": "Miguel",
+      "tel": 319381983,
+      "email": "miguel@juan.com",
+      "company": "IBM"
+    },
+    {
+      "id": 5,
+      "name": "Pedro",
+      "tel": 1398198938,
+      "email": "pedro@juan.com",
+      "company": "IBM"
+    }
+  ]
+}
