@@ -9,6 +9,7 @@ import EditClient, {
   loader as editClientLoader,
   action as editClientAction
 } from '../pages/edit-client';
+import { action as clientAction } from '../components/Client';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         loader: editClientLoader,
         action: editClientAction,
         errorElement: <ErrorPage />
+      },
+      {
+        path: '/clients/:clientId/destroy',
+        action: clientAction
       }
     ]
   }

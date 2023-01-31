@@ -1,4 +1,12 @@
-import { useNavigate } from 'react-router-dom';
+import { Form, useNavigate, redirect } from 'react-router-dom';
+
+import { destroyClient } from '../data/clients';
+
+export const action = async ({ params }) => {
+  await destroyClient(params.clientId);
+
+  return redirect('/');
+};
 
 const Client = ({ client }) => {
   const navigate = useNavigate();
@@ -29,12 +37,22 @@ const Client = ({ client }) => {
         >
           Editar
         </button>
-        <button
-          type="button"
-          className="text-red-600 hover:text-red-700 uppercase font-bold transition-colors text-xs"
+        <Form
+          method="post"
+          action={`/clients/${id}/destroy`}
+          onSubmit={e => {
+            if (!confirm('Deseja deletar esse usuário?')) {
+              e.preventDefault();
+            }
+          }}
         >
-          Deletar
-        </button>
+          <button
+            type="submit"
+            className="text-red-600 hover:text-red-700 uppercase font-bold transition-colors text-xs"
+          >
+            Deletar
+          </button>
+        </Form>
       </td>
     </tr>
   );
