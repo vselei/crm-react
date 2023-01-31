@@ -1,6 +1,6 @@
 import { useLoaderData } from 'react-router-dom';
 
-import { getClients } from '../data/clients.jsx';
+import { getClients } from '../data/clients';
 
 import Client from '../components/Client';
 

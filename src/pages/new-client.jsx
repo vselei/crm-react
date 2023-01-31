@@ -1,8 +1,11 @@
 import {
   useNavigate,
   Form as Formulary,
-  useActionData
+  useActionData,
+  redirect
 } from 'react-router-dom';
+
+import { postClient } from '../data/clients';
 
 import Form from '../components/Form';
 import Error from '../components/Error';
@@ -23,8 +26,8 @@ export const action = async ({ request }) => {
   let regex = new RegExp(
     "([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
   );
-  if(!regex.test(email)) {
-    errors.push('Email inválido')
+  if (!regex.test(email)) {
+    errors.push('Email inválido');
   }
 
   // Retornar dados e erros
@@ -32,7 +35,9 @@ export const action = async ({ request }) => {
     return errors;
   }
 
-  return null;
+  await postClient(data);
+
+  return redirect('/');
 };
 
 const NewClient = () => {
