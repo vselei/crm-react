@@ -5,7 +5,10 @@ import Layout from '../components/Layout';
 import Index, { loader as clientsLoader } from '../pages';
 import NewClient, { action as newClientAction } from '../pages/new-client';
 import ErrorPage from '../pages/error-page';
-import EditClient, { loader as editClientLoader } from '../pages/edit-client';
+import EditClient, {
+  loader as editClientLoader,
+  action as editClientAction
+} from '../pages/edit-client';
 
 const router = createBrowserRouter([
   {
@@ -21,12 +24,14 @@ const router = createBrowserRouter([
       {
         path: '/clients/new',
         element: <NewClient />,
-        action: newClientAction
+        action: newClientAction,
+        errorElement: <ErrorPage />
       },
       {
         path: '/clients/:clientId/edit',
         element: <EditClient />,
         loader: editClientLoader,
+        action: editClientAction,
         errorElement: <ErrorPage />
       }
     ]

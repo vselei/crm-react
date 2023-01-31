@@ -1,11 +1,12 @@
 {
   "clients": [
     {
-      "id": 1,
-      "name": "Juan",
-      "tel": 102013313,
+      "name": "Juan 2",
+      "company": "IBM",
       "email": "juan@juan.com",
-      "company": "IBM"
+      "tel": "102013313",
+      "notes": "rfrfr",
+      "id": 1
     },
     {
       "id": 2,
@@ -34,6 +35,14 @@
       "tel": 1398198938,
       "email": "pedro@juan.com",
       "company": "IBM"
+    },
+    {
+      "name": "Victor",
+      "company": "DigDum",
+      "email": "vsennaselei@gmail.com",
+      "tel": "21993966088",
+      "notes": "Teste",
+      "id": 6
     }
   ]
 }
