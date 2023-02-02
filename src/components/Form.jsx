@@ -9,7 +9,7 @@ const Form = ({ client }) => {7
           type="text"
           id="name"
           className="mt-2 block w-full p-3 bg-gray-50"
-          placeholder="Nome da empresa"
+          placeholder="Nome do cliente"
           name="name"
           defaultValue={client?.name}
         />
